@@ -16,6 +16,6 @@ public class Reservation {
     @ManyToOne
     private Trajet trajet;
     @ManyToOne
-    private Utilisateur passager;
+    private User passager;
     private String statut;
 }
