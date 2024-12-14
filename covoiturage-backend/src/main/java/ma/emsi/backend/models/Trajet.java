@@ -1,24 +1,20 @@
 package ma.emsi.backend.models;
 
-import jakarta.persistence.*;
-import lombok.Data;
-import java.util.List;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
-@Data
-@Entity
+import java.time.LocalDateTime;
+
 public class Trajet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String pointDepart;
     private String destination;
-    private String heureDepart;
+    private LocalDateTime heureDepart;
     private Integer nbPlaces;
-
     @ManyToOne
-    private Conducteur conducteur;
-
-    @OneToMany(mappedBy = "trajet")
-    private List<Reservation> reservations;
+    private User conducteur;
 }
