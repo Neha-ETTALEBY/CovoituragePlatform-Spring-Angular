@@ -1,4 +1,4 @@
-package services;
+package ma.emsi.backend.services;
 
 import ma.emsi.backend.models.Reservation;
 import ma.emsi.backend.models.Trajet;

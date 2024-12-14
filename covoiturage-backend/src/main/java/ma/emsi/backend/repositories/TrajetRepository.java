@@ -4,6 +4,8 @@ import ma.emsi.backend.models.Trajet;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
+
 public interface TrajetRepository extends JpaRepository<Trajet, Long> {
-    public void findByDestinationContaining(String destination, Pageable pageable);
+    public List<Trajet> findByDestinationContaining(String destination, Pageable pageable);
 }

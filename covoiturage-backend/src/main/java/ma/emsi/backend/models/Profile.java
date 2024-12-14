@@ -1,17 +1,15 @@
 package ma.emsi.backend.models;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.util.Date;
 
 @Data
 @Entity
-@Setter
-@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Profile {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
