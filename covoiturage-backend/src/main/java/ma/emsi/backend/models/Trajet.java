@@ -1,16 +1,14 @@
 package ma.emsi.backend.models;
 
 import jakarta.persistence.*;
-import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Setter
-@Getter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Trajet {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
